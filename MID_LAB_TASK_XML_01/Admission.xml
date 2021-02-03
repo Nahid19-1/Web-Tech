@@ -1,0 +1,40 @@
+<admissionRoot> 
+  <admission sr="1"> 
+   <sl_no> 23 </sl_no>
+   <name>  
+     <firstName>John</firstName>
+     <lastName>Carter</lastName>
+   </name>
+   <admissionDate> 
+     <day>25</day>
+     <month>12</month>
+     <year>2015</year>
+   </admissionDate>
+  </admission> 
+
+  <admission sr="2"> 
+   <sl_no> 29 </sl_no>
+   <name>  
+     <firstName>Bob</firstName>
+     <lastName>Marshal</lastName>
+   </name>
+   <admissionDate> 
+     <day>13</day>
+     <month>01</month>
+     <year>1999</year>
+   </admissionDate>
+  </admission> 
+
+  <admission sr="3"> 
+   <sl_no> 35 </sl_no>
+   <name>  
+     <firstName>Clark</firstName>
+     <lastName>Kent</lastName>
+   </name>
+   <admissionDate> 
+     <day>17</day>
+     <month>06</month>
+     <year>2005</year>
+   </admissionDate> 
+  </admission> 
+</admissionRoot>
