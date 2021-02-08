@@ -1,45 +1,46 @@
 <mainRoot> 
-  <can sr="1"> 
-   	<id> 1 </id>
-  	 <name>  
-   	  <firstName>John</firstName>
-   	  <lastName>Doe</lastName>
-  	 </name>
- 	 <address> 
-     		<house>H# 38</house>
-     		<road>R#3</road>
-    		<city>Banani Dhaka</city>
-   	</address>
-	<department>sales</department>
-	<salary>20000</salary>
-  </can> 
+	  <can sr="1"> 
+			<id> 1 </id>
+			 <name>  
+				  <firstName>John</firstName>
+				  <lastName>Doe</lastName>
+			 </name>
+			 <address> 
+					<house>H# 38</house>
+					<road>R#3</road>
+					<city>Banani Dhaka</city>
+			</address>
+			<department>sales</department>
+			<salary>20000</salary>
+	  </can> 
 
-  <can sr="2"> 
-   	<id> 2 </id>
-  	 <name>  
-   	  <firstName>MArk</firstName>
-   	  <lastName>Zuckerberg</lastName>
-  	 </name>
- 	 <address> 
-     		<house>Flat# A/1, H# 20,</house>
-     		<road>R#18</road>
-    		<city>Mirpur, Dhaka</city>
-   	</address>
-	<department>Accounts</department>
-	<salary>12000</salary>
-  </can> 
-  <can sr="3"> 
-   	<id> 3 </id>
-  	 <name>  
-   	  <firstName>Ala</firstName>
-   	  <lastName>Voski</lastName>
-  	 </name>
- 	 <address> 
-     		<house>H# 38</house>
-     		<road>R#3</road>
-    		<city>Motijheel</city>
-   	</address>
-	<department>Human Resource</department>
-	<salary>30000</salary>
-  </can> 
+	  <can sr="2"> 
+			<id> 2 </id>
+			 <name>  
+				  <firstName>MArk</firstName>
+				  <lastName>Zuckerberg</lastName>
+			 </name>
+			 <address> 
+					<house>Flat# A/1, H# 20,</house>
+					<road>R#18</road>
+					<city>Mirpur, Dhaka</city>
+			</address>
+			<department>Accounts</department>
+			<salary>12000</salary>
+	  </can> 
+	  
+	  <can sr="3"> 
+			<id> 3 </id>
+			 <name>  
+				  <firstName>Ala</firstName>
+				  <lastName>Voski</lastName>
+			 </name>
+			 <address> 
+					<house>H# 38</house>
+					<road>R#3</road>
+					<city>Motijheel</city>
+			</address>
+			<department>Human Resource</department>
+			<salary>30000</salary>
+	  </can> 
 </mainRoot>
