@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	require_once('../model/userModel.php');
 	
 	if(isset($_POST['submit'])){
 
@@ -11,26 +12,16 @@
 		}else{
 
 			//$user = $_SESSION['abc'];
-			$conn = mysqli_connect('localhost', 'root', '', 'webtech');
-			if($conn == null)
-				{
-					die('Error connection');
-				}
-			$sql = "select * from test1 where Id ='7' ";
-				$result = mysqli_query($conn ,$sql);
-				$data =  mysqli_fetch_assoc($result);
 
-
-
-			if($username == $data['username'] && $password == $data['password']){
+			$status = validateUser($username, $password);
 				
+			if($status){
 				$_SESSION['status'] = true;
+				$_SESSION['username'] = $username;
 				header('location: ../view/home.php');
-
 			}else{
 				echo "invalid user...";
 			}
 		}
 	}
 ?>
-

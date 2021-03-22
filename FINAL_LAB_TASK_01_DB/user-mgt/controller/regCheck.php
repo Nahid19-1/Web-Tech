@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	require_once('../model/userModel.php');
 
 	if(isset($_POST['submit'])){
 
@@ -14,11 +15,7 @@
 		}else{
 
 			if($password == $repass){
-
-				echo "registration success...";
-				echo "<a href='login.html'>SignIn </a>";
-
-				//store user information
+				
 				$user = [
 							 
 							'name'		=>$name, 
@@ -27,27 +24,15 @@
 							'password'	=>$password
 						];
 
-				//$_SESSION['abc'] = $user;
-				$conn = mysqli_connect('localhost', 'root', '', 'webtech');
-			
-				if($conn == null)
-				{
-					die('Error connection');
-				}
+				$status = insertUser($user);
 
-				$sql = "insert into test1 values('', '{$user['name']}','{$user['username']}', '{$user['password']}','{$user['email']}')";
-				$result = mysqli_query($conn ,$sql);
-
-				if($result){
+				if($status){
 					header('location: ../view/login.html');
 				}else{
-					echo "something wrong...";
+					echo "Db error";
 				}
-				
 
-				
-				}
-			else{
+			}else{
 				echo "password & re-type password mismatch...";
 			}
 		}

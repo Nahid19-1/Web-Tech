@@ -2,6 +2,7 @@
 	
 	$title = "User List Page";
 	include('header.php');
+	require_once('../model/userModel.php');
 
 ?>
 
@@ -16,16 +17,10 @@
 	</div>
 
 	<div id="main_content">
-		
+	
 		<?php
-			 $conn = mysqli_connect('localhost', 'root', '', 'webtech');
-			if($conn == null)
-			{
-				die('Error connection');
-			}
 
-			$sql = 'select * from test1';
-			$result = mysqli_query($conn, $sql);
+			$alluser = getAllUser();
 
 			echo "<table border =1 align = 'Left'> 
 			    <tr>
@@ -35,27 +30,25 @@
 					<td>Email</td>
 					<td>ACTION</td>
 				</tr>";
-			while ($row = mysqli_fetch_assoc($result))
+			while ($row = mysqli_fetch_assoc($alluser))
 			 {
 						
-				echo 	"<tr>
+				echo 	
+					"<tr>
 						<td>{$row['Id']}</td>
 						<td>{$row['name']}</td>
 						<td>{$row['username']}</td>
 						<td>{$row['email']}</td>
-
-									
+						<td> 
+							<a href='edit.php?id={$row['Id']}'> Edit</a> | 
+							<a href='delete.php?id={$row['Id']}'> Delete </a> 
+						</td>					
+										
 					</tr>";
 			}
 			echo "</table>";
 		?>
 			
 	</div>
-	<br>
-	<div>
-		<?php include('footer.php') ?>
-	</div>
 
-
-
-
+<?php include('footer.php') ?>
