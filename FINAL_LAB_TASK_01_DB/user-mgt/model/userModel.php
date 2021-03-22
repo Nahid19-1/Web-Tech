@@ -39,7 +39,7 @@
 		$conn = getConnection();
 		$sql = "select * from test1";
 		$result = mysqli_query($conn, $sql);
-		$row = mysqli_fetch_assoc($result);
+
 		/*$users = [];
 
 		while ($row = mysqli_fetch_assoc($result)) {
@@ -49,9 +49,18 @@
 		return $result;
 	}
 
-	function updateUser($user){
+	function getUserId($id){
+		//$id = $_GET['id'];
 		$conn = getConnection();
-		$sql = "update users set username='{$user['username']}', password='{$user['password']}', email='{$user['email']}', type='{$user['user']}' where id={$user['id']}";
+		$sql = "select * from test1 where Id ='{$id}'";
+		$result = mysqli_query($conn, $sql);
+		return $result;
+	}
+
+	function updateUser($id,$user){
+
+		$conn = getConnection();
+		$sql = "update test1 set name ='{$user['name']}', username='{$user['username']}', password='{$user['password']}', email='{$user['email']}' where Id='{$id}'";
 		
 		if(mysqli_query($conn, $sql)){
 			return true;
