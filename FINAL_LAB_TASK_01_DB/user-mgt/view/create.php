@@ -16,7 +16,7 @@
 	</div>
 
 	<div id="main_content">
-		<form method="post" action="">
+		<form method="post" action="../controller/createCheck.php">
 			<fieldset>
 				<legend>Create New</legend>
 				<table>
