@@ -71,7 +71,7 @@
 
 	function deleteUser($id){
 		$conn = getConnection();
-		$sql = "delete from users where id={$id}";
+		$sql = "delete from test1 where Id={$id}";
 		
 		if(mysqli_query($conn, $sql)){
 			return true;
