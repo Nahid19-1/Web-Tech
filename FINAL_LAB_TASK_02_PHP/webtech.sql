@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 24, 2021 at 04:50 AM
+-- Generation Time: Mar 27, 2021 at 06:55 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.3.27
 
@@ -41,7 +41,8 @@ CREATE TABLE `products` (
 INSERT INTO `products` (`Id`, `name`, `buyingPrice`, `sellingPrice`) VALUES
 (2, 'Pen', 80, 100),
 (3, 'Marker', 75, 120),
-(4, 'Harry Poter', 250, 400);
+(4, 'Harry Poter 1', 250, 400),
+(5, 'Pencil', 17, 25);
 
 -- --------------------------------------------------------
 
@@ -94,7 +95,7 @@ ALTER TABLE `test1`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `test1`

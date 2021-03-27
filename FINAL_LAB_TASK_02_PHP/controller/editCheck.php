@@ -9,11 +9,12 @@
 		$bPrice = $_POST['buyPrice'];
 		$sPrice = $_POST['sellPrice'];
 		$id = $_SESSION['id'];
+	//	print_r($id);
 		
 		$products = [
-							'name' => $name,
-							'buyPrice' => $bPrice,
-							'sellPrice'=> $sPrice
+							'name'		 => $name,
+							'buyPrice'	 => $bPrice,
+							'sellPrice'	 => $sPrice
 						];
 		
 		$status = updateProduct($id, $products);

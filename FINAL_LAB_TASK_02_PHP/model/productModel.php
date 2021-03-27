@@ -41,7 +41,22 @@
 	{
 
 		$conn = getConnection();
-		$sql = "update products set name = '{$products['name']}', '{$products['buyPrice']}', '{$products['sellPrice']}' where Id='{$id}'";
+		$sql = "update products set name = '{$products['name']}', buyingPrice='{$products['buyPrice']}', sellingPrice='{$products['sellPrice']}' where Id='{$id}'";
+		
+		if(mysqli_query($conn, $sql))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	function deleteProduct($id)
+	{
+		$conn = getConnection();
+		$sql = "delete from products where id='{$id}'";
 		
 		if(mysqli_query($conn, $sql))
 		{
@@ -53,18 +68,5 @@
 		}
 	}
 
-	/*
 	
-
-	function deleteUser($id){
-		$conn = getConnection();
-		$sql = "delete from product where id={$id}";
-		
-		if(mysqli_query($conn, $sql)){
-			return true;
-		}else{
-			return false;
-		}
-	}
-*/
 ?>

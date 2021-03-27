@@ -1,6 +1,6 @@
 <?php 
 	require_once('../model/productModel.php');
-
+	session_start();
 	$id = $_GET['id'];
 	$productId = getProductByID($id);
 	$row = mysqli_fetch_assoc($productId);
@@ -35,7 +35,7 @@
 				
 				<tr>
 					<td>
-						<input type="checkbox" name="check" > Display
+						<input type="checkbox" name="check" > Display 
 						<br>__________________________
 					</td>
 				</tr>
