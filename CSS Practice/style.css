@@ -1,0 +1,31 @@
+#d1 { 
+		
+		background-color: rgb(39, 54, 39); 
+		width: 1600px;
+		height: 70px;
+	}
+#d2 {
+	position: relative;
+	left: 150px;
+	}
+#d3 {
+	position: absolute;
+	top: 0;
+	left: 935px;
+
+	}
+#d4 { 
+		
+	background-color: rgb(219, 228, 219); 
+	width: 1600px;
+	height: 300px;
+	}
+#d5 {
+		position: relative;
+		left: 455px;
+	}
+#d6 {
+		position: relative;
+		top: 30px;
+		left: 20px;
+	}
