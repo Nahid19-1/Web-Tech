@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registratio Page</title>
+</head>
+<body>
+	<form method="post" action="../controller/regCheck.php">
+		<fieldset>
+			<legend>Registration</legend>
+			<table id="info">
+				<tr>
+					<td>Name</td>
+					<td>:</td>
+					<td><input type="text" name="name" id="name" ></td>
+				</tr>
+				<tr>
+					<td>Username</td>
+					<td>:</td>
+					<td><input type="text" name="username" id="username"></td>
+				</tr>
+				<tr>
+					<td>Phone</td>
+					<td>:</td>
+					<td><input type="number" name="phone" id="phone"></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td>:</td>
+					<td><input type="email" name="email" id="email"></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td>:</td>
+					<td><input type="password" name="password" id="password"></td>
+				</tr>
+				<tr>
+					<td>Confirm Password</td>
+					<td>:</td>
+					<td><input type="password" name="Cpassword" id="Cpassword"></td>
+				</tr>
+				<tr>
+					<td><a href="login.html">Back</a></td>
+					<td></td>
+					<td>
+						<input type="button" name="submit" onclick="validation()" value="Submit">
+						<a href="login.html">Sign In</a>
+					</td>
+				</tr>
+				<br>
+
+			</table>
+		</fieldset>
+	</form>
+	<script>
+		/*function changeVal(){
+			document.getElementById('leg').innerHTML = "Registration";
+			alert()
+		}*/
+		function validation(){
+
+
+			const name =document.getElementById('name').value ;
+			const username =document.getElementById('username').value;
+			const email =document.getElementById('email').value;
+			const phone =document.getElementById('phone').value;
+			const password=document.getElementById('password').value;
+			const Cpassword =document.getElementById('Cpassword').value;
+
+			if(name=="" || username=="" || phone=="" || email=="" || password=="" || Cpassword=="")
+				{
+					document.getElementById('info').innerHTML = "invalid data";
+				}
+			else
+				{
+					
+					
+					//window.alert(name);
+					document.write("Name : ");  
+					document.write(name);
+
+					document.write("<br>");
+					document.write("Username : "); 
+					document.write(username);
+
+					document.write("<br>");
+					document.write("Email : "); 
+					document.write(email);
+					
+					document.write("<br>");
+					document.write("Phone : "); 
+					document.write(phone);
+
+					//document.getElementById('info').innerHTML =name;
+					//document.getElementById('info').innerHTML =username;
+
+
+
+
+				}
+			}
+	</script>
+</body>
+</html>
+
+
+
+
