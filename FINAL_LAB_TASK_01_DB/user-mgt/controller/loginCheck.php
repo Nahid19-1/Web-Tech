@@ -7,9 +7,13 @@
 		$username 	= $_POST['username'];
 		$password 	= $_POST['password'];
 		
-		if($username == "" || $password == ""){
+		if($username == "" ){
 			echo "Null submission";
-		}else{
+		}
+		elseif ( $password == "") {
+			echo "Password missing";
+		}
+		else{
 
 			//$user = $_SESSION['abc'];
 

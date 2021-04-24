@@ -6,6 +6,7 @@
 	$id = $_GET['id'];
 	$userId = getUserId($id);
 	$row = mysqli_fetch_assoc($userId);
+	$_SESSION['id'] = $id;
 	
 ?>
 

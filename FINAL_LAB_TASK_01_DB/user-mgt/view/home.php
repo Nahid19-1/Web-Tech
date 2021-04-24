@@ -5,6 +5,13 @@
 	//require('header.php');
 	require_once('header.php')
 ?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="../model/script.js"></script>
+		<script type="text/javascript"></script>
+	</head>
+<body>
 
 	<div id="page_title">
 		<h1>Welcome Home, <?php echo $_SESSION['username']?></h1>		
@@ -22,5 +29,17 @@
 		<br>
 		<br>
 	</div>
+	<div>
+		<input type="text" name="search" id="name" onkeyup="ajax()">
+		<input type="button" name="" value="search" onclick="ajax()">
+	</div>
+	<div id="result"></div>
+</body>
+</html>
+
+
+
+
+	
 
 <?php include('footer.php') ?>
